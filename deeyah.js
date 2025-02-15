@@ -1,3 +1,22 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const mainMessage = document.getElementById("main-message");
+  const surpriseMessage = document.getElementById("surprise-message");
+  const surpriseBtn = document.getElementById("surprise-btn");
+  const backBtn = document.getElementById("back-btn");
+
+  surpriseBtn.addEventListener("click", function () {
+    mainMessage.style.display = "none";
+    surpriseMessage.style.display = "block";
+  });
+
+  backBtn.addEventListener("click", function () {
+    mainMessage.style.display = "block";
+    surpriseMessage.style.display = "none";
+  });
+});
+
+
+
 const creatHeart = () => {
   const heart = document.createElement("div");
   heart.classList.add("heart");
